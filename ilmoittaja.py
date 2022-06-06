@@ -17,7 +17,7 @@ print("Lentokoneiden etsiminen aloitettiin.")
 while True:
 	currentlyVisible = []
 	try:
-		req = requests.get(config["aircrafts_json_url"])
+		req = requests.get(config["aircraft_json_url"])
 		content = json.loads(req.content.decode())
 		for plane in content["aircraft"]:
 			if "hex" in plane:
